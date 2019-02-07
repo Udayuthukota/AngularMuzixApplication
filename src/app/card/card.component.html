@@ -1,0 +1,31 @@
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" style="height: 300px;" src="{{getImage1}}" alt="Singer Image">
+  <div class="card-body">
+    <h5 class="card-title">Track Details</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" *ngIf="getName">TrackName:{{getName}}</li>
+    <li class="list-group-item" *ngIf="getId">TrackId{{getId}}</li>
+    <li class="list-group-item"*ngIf="getArtist1">ArtistName{{getArtist1}}</li>
+  </ul>
+</div>
+  <!-- <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div> -->
+
+
+<!-- <mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title *ngIf="getName">Name:{{getName}}</mat-card-title>
+    <mat-card-subtitle *ngIf="getId">Id{{getId}}</mat-card-subtitle>
+    <mat-card-subtitle *ngIf="getArtist1">Artist{{getArtist1}}</mat-card-subtitle>
+    <mat-card-subtitle *ngIf="getImage1"><img mat-card-image src="{{getImage1}}" alt="Photo of a Singer" ></mat-card-subtitle>
+
+  </mat-card-header>
+</mat-card> -->
+
+
+<!-- Copyright 2018 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->

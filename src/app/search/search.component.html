@@ -1,0 +1,60 @@
+<!-- <nav class="navbar fixed-top navbar-light bg-light justify-content-between">
+  <a class="navbar-brand">Music Is Life</a>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" name="value" placeholder="Search" aria-label="Search" [(ngModel)] =  "value">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)= "search(value)">Search</button>
+  </form>
+</nav> -->
+<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">MuZixApp</a>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+          <a class="nav-link" href="/wishList">MyTracks <span class="sr-only">(current)</span></a>
+        </li>
+    </ul>
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" name="value" placeholder="Search" aria-label="Search" [(ngModel)] =  "value">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)= "search(value)">Search</button>
+        </form>
+
+  </div>
+  </nav>/
+
+<div class="body1">
+
+<ul *ngIf="searchData">
+  <li *ngFor = "let search1 of searchData" style="display: inline-block" class="col-sm-4">
+    <!-- <img src="{{getImage(search1)}}" alt="image of Singer" ><br> -->
+    <!-- Id:{{search1.listeners}}
+    Name:{{search1.name}}<br>
+    Artist:{{search1.artist}}<br> -->
+    <app-card [getName]=search1.name [getId]=search1.listeners [getArtist1]=search1.artist [getImage1]=getImage(search1)></app-card>
+    <button class="btn btn-primary" (click)="save(search1.listeners,search1.name,getImage(search1))" >Add to your wishlist</button><br>
+    <br><br><br><br>
+  </li> 
+ </ul>
+</div>
+
+<!-- <form>
+  <input type="text" name="value" [(ngModel)] =  "value" size="40"/>
+  <button (click)= "search(value)" >Click here to Search</button>
+ </form>
+ <ul *ngIf="searchData">
+  <li *ngFor = "let search1 of searchData"> -->
+    <!-- <img src="{{getImage(search1)}}" alt="image of Singer" ><br> -->
+    <!-- Id:{{search1.listeners}}
+    Name:{{search1.name}}<br>
+    Artist:{{search1.artist}}<br> -->
+    <!-- <app-card [getName]=search1.name [getId]=search1.listeners [getArtist1]=search1.artist [getImage1]=getImage(search1)></app-card>
+    <button (click)="save(search1.listeners,search1.name,search1.artist)" >Add to your wishlist</button><br>
+  
+  </li>
+ </ul> -->

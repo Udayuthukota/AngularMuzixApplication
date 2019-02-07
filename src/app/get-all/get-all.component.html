@@ -1,0 +1,38 @@
+<!-- 
+<br><br><br>
+  <button (click)="getall()">My Wish List</button> -->
+
+<ul *ngIf='tracks'>
+  <li *ngFor='let track of tracks' style="display: inline-block" class="col-sm-4">
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" style="height: 300px;" src="{{track.comment}}" alt="Singer Image">
+  <div class="card-body">
+    <h5 class="card-title">Track Details</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" >TrackName:{{track.trackName}}</li>
+    <li class="list-group-item" >TrackId{{track.trackId}}</li>
+     <!-- <li class="list-group-item">ArtistName{{getArtist1}}</li> -->
+   </ul>
+</div>
+<input type="text" name="find" [(ngModel)]="find"/><br>
+<button class="btn btn-danger" (click)="updateService(find,track)">Update Name</button><br>
+<button  class="btn btn-danger" (click)="deleteService(track.trackId)">Delete From Wish List</button>
+<br><br><br>
+</li>
+
+</ul>  
+
+
+
+  
+<!-- 
+<ul *ngIf='tracks'>
+  <li *ngFor='let track of tracks'>
+       <p> trackName:{{track.trackName}} </p>
+       <p>trackID:{{track.trackId}}</p>
+       <img src="{{track.comment}}" alt="Singer Name"><br>
+      <button (click)="deleteService(track.trackId)">Delete From Wish List</button>
+  </li>
+ 
+</ul> -->
